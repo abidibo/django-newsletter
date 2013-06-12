@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf8" />
+  </head>
+  <body>
+    {{ text|safe }}
+    <p>
+    Se non desideri più ricevere la newsletter visita il seguente link:<br />
+    <a href="{{ unsubscribe }}">{{ unsubscribe }}</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+{{ content }}\r\n
+Se non desideri più ricevere la newsletter visita il seguente link:\r\n
+{{ unsubscribe }}

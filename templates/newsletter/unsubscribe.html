@@ -1,0 +1,12 @@
+{% extends 'base_site_row1.html' %}
+{% load i18n %} 
+{% block row_1_expanded%}
+  <section>
+    <h1>{% trans "Cancellazione Newsletter "%}</h1>
+    {% if result %}
+      <p>{% trans "La cancellazione del tuo indirizzo email è avvenuta con successo."%}</p>
+    {% else %}
+      <p>{% trans "Si è verificato un errore, ti preghiamo di scrivere a info@vallesusa-tesoti.it per segnalare il problema."%}</p>
+    {% endif %}
+  </section>
+{% endblock %}

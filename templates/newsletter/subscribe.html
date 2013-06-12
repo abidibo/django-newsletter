@@ -1,0 +1,23 @@
+{% extends 'base_site_row1.html' %}
+{% load i18n %} 
+{% block row_1_expanded%}
+  <section>
+    <h1>{% trans "Sottoscrizione Newsletter "%}</h1>
+    {% if result %}
+      <p>{% trans "Grazie per esserti iscritto alla newsletter di Vallesusa Tesori! Entro breve riceverai una mail con le informazioni relative all'iscrizione."%}</p>
+    {% else %}
+      <p>{% trans "La sottoscrizione potrà essere cancellata in ogni momento cliccando sul link indicato nella mail che riceverai alla conferma della sottoiscrizione."%}</p>
+      <p>{% trans "I campi in grassetto sono obbligatori "%}</p>
+       <form class="newsletter_subscription" method="post" action="">
+        {% csrf_token %}
+        <table class="generic form">
+        {{ form.as_table }}
+          <tr>
+            <th></th>
+            <td><input type="submit" value="{% trans "iscrivimi" %}" /></td>
+          </tr>
+        </table>
+      </form>
+    {% endif %}
+  </section>
+{% endblock %}
