@@ -3,7 +3,6 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import permalink
-from shared.models import Thematism
 from django.contrib.sites.models import Site
 from django.core.mail import send_mail, get_connection
 from django.core.mail import EmailMultiAlternatives
